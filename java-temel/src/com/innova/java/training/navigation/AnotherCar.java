@@ -1,24 +1,23 @@
 package com.innova.java.training.navigation;
 
 
-public class Car {
+public class AnotherCar {
 
     int    avrgSpeed;
-    String carName;
+    String carName = "default";
 
-    Car() {
-        this.avrgSpeed = 50;
-        this.carName = "default";
+    AnotherCar(int avrgSpeed) {
+        this("default",
+             avrgSpeed);
     }
 
-    Car(final int avr) {
-        System.out.println("Car objesi yaratılıyor");
-        this.avrgSpeed = avr;
-        this.carName = "default";
+    AnotherCar(String carName) {
+        this(carName,
+             50);
     }
 
-    Car(final String name,
-        final int avr) {
+    AnotherCar(String name,
+               int avr) {
         System.out.println("Car objesi yaratılıyor");
         this.avrgSpeed = avr;
         this.carName = name;
