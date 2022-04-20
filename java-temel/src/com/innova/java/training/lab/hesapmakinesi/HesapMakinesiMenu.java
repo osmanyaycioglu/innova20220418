@@ -1,54 +1,60 @@
 package com.innova.java.training.lab.hesapmakinesi;
 
+import static com.innova.java.training.lab.hesapmakinesi.HesapMakinesiSabitleri.BOLME_INDEXI;
+import static com.innova.java.training.lab.hesapmakinesi.HesapMakinesiSabitleri.CARPMA_INDEXI;
+import static com.innova.java.training.lab.hesapmakinesi.HesapMakinesiSabitleri.CIKARMA_INDEXI;
+import static com.innova.java.training.lab.hesapmakinesi.HesapMakinesiSabitleri.TOPLAMA_INDEXI;
+
 import java.util.Scanner;
 
 public class HesapMakinesiMenu {
 
-    private Scanner       scanner;
-    private HesapMakinesi hesapMakinesi;
+
+    private final Scanner       scanner;
+    private final HesapMakinesi hesapMakinesi;
 
     public HesapMakinesiMenu() {
-        scanner = new Scanner(System.in);
-        hesapMakinesi = new HesapMakinesi();
+        this.scanner = new Scanner(System.in);
+        this.hesapMakinesi = new HesapMakinesi();
     }
 
     public void menuGoster() {
-        System.out.println("1-toplama");
-        System.out.println("2-cikarma");
-        System.out.println("3-carpma");
-        System.out.println("4-bolme");
+        System.out.println(TOPLAMA_INDEXI + "-toplama");
+        System.out.println(CIKARMA_INDEXI + "-cikarma");
+        System.out.println(CARPMA_INDEXI + "-carpma");
+        System.out.println(BOLME_INDEXI + "-bolme");
     }
 
     public int secimYap() {
         System.out.println("Seçiminiz : ");
-        int nextIntLoc = scanner.nextInt();
+        int nextIntLoc = this.scanner.nextInt();
         return nextIntLoc;
     }
 
-    public void islemYap(int secim) {
+    public void islemYap(final int secim) {
         System.out.println("Birinci değişken : ");
-        int v1 = scanner.nextInt();
+        int v1 = this.scanner.nextInt();
         System.out.println("İkinci değişken : ");
-        int v2 = scanner.nextInt();
+        int v2 = this.scanner.nextInt();
         switch (secim) {
-            case 1:
-                int toplamaLoc = hesapMakinesi.toplama(v1,
-                                                       v2);
+            case TOPLAMA_INDEXI:
+                int toplamaLoc = this.hesapMakinesi.toplama(v1,
+                                                            v2);
                 System.out.println("Toplama sonucu : " + toplamaLoc);
                 break;
-            case 2:
-                int cikarmaLoc = hesapMakinesi.cikarma(v1,
-                                                       v2);
+            case CIKARMA_INDEXI:
+                int cikarmaLoc = this.hesapMakinesi.cikarma(v1,
+                                                            v2);
                 System.out.println("Cikarma sonucu : " + cikarmaLoc);
                 break;
-            case 3:
-                int carpmaLoc = hesapMakinesi.carpma(v1,
-                                                     v2);
+            case CARPMA_INDEXI:
+                int carpmaLoc = this.hesapMakinesi.carpma(v1,
+                                                          v2);
                 System.out.println("Carpma sonucu : " + carpmaLoc);
                 break;
-            case 4:
-                int bolmeLoc = hesapMakinesi.bolme(v1,
-                                                   v2);
+            case BOLME_INDEXI:
+                int bolmeLoc = this.hesapMakinesi.bolme(v1,
+                                                        v2);
                 System.out.println("Bolme sonucu : " + bolmeLoc);
                 break;
             default:
