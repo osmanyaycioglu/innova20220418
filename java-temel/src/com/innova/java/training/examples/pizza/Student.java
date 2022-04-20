@@ -1,7 +1,7 @@
 package com.innova.java.training.examples.pizza;
 
 
-public class Student {
+public class Student extends Object {
 
     // Mandatory
     private String name;
@@ -80,6 +80,22 @@ public class Student {
 
     public void setHeight(int heightParam) {
         height = heightParam;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Student [name="
+               + name
+               + ", surname="
+               + surname
+               + ", studentId="
+               + studentId
+               + ", grade="
+               + grade
+               + ", height="
+               + height
+               + "]";
     }
 
 }
