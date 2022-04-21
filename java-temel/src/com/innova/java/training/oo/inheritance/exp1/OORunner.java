@@ -12,6 +12,10 @@ public class OORunner {
         c.hello();
         c.greet();
         c.goodbye();
+        System.out.println("------------------");
+        A ax = new C("ali");
+        B bx = new C("kemal");
+        Object obj1 = new C("Veli");
 
     }
 }
