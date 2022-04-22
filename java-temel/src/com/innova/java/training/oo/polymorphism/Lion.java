@@ -1,12 +1,11 @@
 package com.innova.java.training.oo.polymorphism;
 
 
-public class Bird extends AbstractBirdFamily {
+public class Lion extends AbstractCatFamily {
 
     @Override
     public String talk() {
-        return "cik cik";
+        return "Roorr";
     }
-
 
 }

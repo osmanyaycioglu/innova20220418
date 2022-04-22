@@ -1,7 +1,7 @@
 package com.innova.java.training.navigation;
 
 
-public class Car {
+public class Car implements INavigationElement {
 
     int    avrgSpeed;
     String carName;
@@ -24,14 +24,16 @@ public class Car {
         this.carName = name;
     }
 
-    int goForward(final int km) {
+    @Override
+    public int goForward(final int km) {
         int result = km / this.avrgSpeed;
         System.out.println("Calculated value for " + this.carName + " : " + result);
         return result;
     }
 
-    int turn(final int speed,
-             final int angle) {
+    @Override
+    public int turn(final int speed,
+                    final int angle) {
         return (speed * 180) / angle;
     }
 }

@@ -8,6 +8,7 @@ public class HelloFactory {
         System.out.println("2-Turkish");
         System.out.println("3-Spanish");
         System.out.println("4-chinesse");
+        System.out.println("5-Russian");
     }
 
     public static IHello createHello(final int index) {
@@ -20,6 +21,8 @@ public class HelloFactory {
                 return new HelloSpanish();
             case 4:
                 return new HelloChinesse();
+            case 5:
+                return new HelloRussian();
             default:
                 return new HelloImpl();
         }

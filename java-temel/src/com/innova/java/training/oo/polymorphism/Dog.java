@@ -10,7 +10,7 @@ public class Dog implements IAnimal {
 
     @Override
     public void move() {
-        System.out.println("4 ayak yürü");
+        System.out.println("Dört ayak yürü");
     }
 
     @Override

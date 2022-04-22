@@ -17,7 +17,6 @@ public class B extends A {
     @Override
     public void hello() {
         System.out.println("Ola : " + super.name);
-        super.hello();
     }
 
 }
